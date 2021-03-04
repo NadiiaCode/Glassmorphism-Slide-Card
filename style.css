@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Akaya+Telivigala&display=swap");
+
+* {
+  font-family: "Akaya Telivigala", cursive;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+  background: linear-gradient(90deg, #a8cfcc 0%, #bda2ba 100%);
+}
+
+.container {
+  width: 1000px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.container .card {
+  height: 270px;
+  width: 45%;
+  margin: 20px 0;
+  position: relative;
+  display: flex;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 7px 15px #91a0a1;
+}
+
+.container .card .iconBox {
+  top: 10px;
+  left: 10px;
+  position: absolute;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  backdrop-filter: blur(20px);
+  background: #88b4a12a;
+  border-radius: 20px;
+  border: 2px solid #a6cebd18;
+  box-shadow: 5px 5px 20px #2e4d4d3f;
+  transition: 0.4s ease-in-out;
+}
+
+.container .card:hover .iconBox {
+  width: 170px;
+  height: 170px;
+  top: calc(50% - 80px);
+  left: -85px;
+}
+
+.container .card .iconBox img {
+  max-width: 100px;
+  filter: invert(1);
+  transition: 0.4s ease-in-out;
+}
+
+.container .card:hover .iconBox img {
+  max-width: 70px;
+}
+
+.container .card .content {
+  width: calc(100% - 75px);
+  height: 100%;
+  right: 0;
+  padding: 20px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container .card .content h3 {
+  color: #1e2533;
+  margin-bottom: 12px;
+  font-size: 30px;
+  letter-spacing: 3px;
+  font-weight: bold;
+}
+
+p {
+  font-size: 24px;
+  letter-spacing: 2px;
+  color: #383f4d;
+}
